@@ -34,7 +34,7 @@ const App = () => {
 				</a>
 			</section>
 			<div className="datepicker" style={{visibility: Object.keys(indexMonth()).length === 0 ? 'hidden' : ''}}>
-				<div className="datepicker__list" style={{width: 133.03 * Object.keys(indexMonth()).length + 'px'}}>
+				<div className="datepicker__list" style={{width: 150 * Object.keys(indexMonth()).length + 'px'}}>
 					{ Object.keys(indexMonth()).map((month) => <DatePicker isActive={currentDate === month} date={month} setCurrentDate={setCurrentDate} key={month}/>) }
 				</div>
 			</div>

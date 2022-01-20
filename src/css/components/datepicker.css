@@ -1,6 +1,7 @@
 
 .datepicker__item {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	padding: 8px 15px;
 	margin-right: 10px;
 	text-align: center;
@@ -9,8 +10,35 @@
 	cursor: pointer;
 	transition: background-color 0.3s ease
 }
+
+.datepicker__item:before {
+	content: '';
+	display: inline-block;
+	margin-right: -5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	transition: margin-right 0.3s ease
+}
+
 .datepicker__item:last-child {margin-right: 0}
 
 .datepicker__item:hover, .datepicker__item-active {
-	background-color: var(--color-highlight);
+	position: relative;
+	background-color: var(--color-deep-highlight);
+}
+.datepicker__item-active:before {
+	margin-right: 5px;
+	background-color: #71279E;
+	animation: shine 1.5s infinite linear;
+}
+
+
+@keyframes shine {
+	0%, 100% {
+		opacity: 0.2
+	}
+	50% {
+		opacity: 1
+	}
 }
