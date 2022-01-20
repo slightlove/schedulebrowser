@@ -2,9 +2,10 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/zh-tw';
 import '../css/components/schedule.css';
 
-function Schedule({data}) {
+function Schedule({data, paidTicketList, setPaidTicketList}) {
+
 	const {id, datetime, place, teams, type} = data;
-	
+
 	return (
 		<div className="schedule__item">
 			<div className="schedule__item__header">
@@ -28,15 +29,14 @@ function Schedule({data}) {
 			<div className="schedule__item__footer">
 				<div className="buttons">
 					<button className="btn btn-main" type="button">查看詳情</button>
-					<button className="btn btn-danger" type="button" onClick={(e) => {
+					<button className="btn btn-danger" type="button" disabled={paidTicketList.indexOf(id) != -1} onClick={(e) => {
 						console.log({
 							gameId: id,
 							date: dayjs(datetime).format('YYYY-MM-DD'),
 							time: dayjs(datetime).format('HH:mm')
 						});
-						event.target.setAttribute('disabled', true);
-						event.target.textContent = '已購買'
-					}}>購票</button>
+						setPaidTicketList([...paidTicketList, id]);
+					}}>{paidTicketList.indexOf(id) != -1 ? '已購買' : '購買'}</button>
 				</div>
 			</div>
 		</div>
