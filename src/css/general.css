@@ -1,0 +1,125 @@
+:root {
+	--base-font-size: 16px;
+	--base-font-family: "微軟正黑體", Verdana, "Microsoft JhengHei", sans-serif;
+	--color-main: #E8E8E8;
+	--color-gray: #B9BABB;
+	--color-date: #2F3140;
+	--color-highlight: #71279E;
+	--color-background-color: #17181D;
+
+	--device-mobile-width: 480px;
+	--device-gutter-height: 38px;
+}
+
+body, html {
+	font-size: var(--base-font-size);
+	font-family: var(--base-font-family);
+	color: var(--color-main);
+	background-color: var(--color-background-color);
+}
+
+#app {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: var(--device-mobile-width);
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+section {
+	padding-top: calc(50px + var(--device-gutter-height))
+}
+
+.container {
+	margin: 0 16px;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.btn {
+	display: inline-block;
+	line-height: 1.5;
+	text-align: center;
+	vertical-align: middle;
+	padding: .3125rem .75rem;
+	font-size: 1rem;
+	border-radius: .25rem;
+	transition: all .15s ease-in-out;
+	border-width: 1px;
+	border-style: solid;
+	color: var(--color-main);
+	cursor: pointer;
+}
+
+.btn-main {
+	background-color: #393B4F;
+	border-color: #393B4F;
+}
+
+.btn-danger {
+	background-color: #94263C;
+	border-color: #94263C;
+}
+
+.buttons {
+	margin: 1rem auto 0;
+	display: flex;
+	align-items: center;
+}
+.buttons .btn {
+	flex: 1;
+	margin-right: 1rem;
+}
+
+.buttons .btn:last-child {
+	margin-right: 0;
+}
+
+.card__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 53px auto 16px;
+}
+
+.card__header h2 {
+	margin: 0;
+}
+.card__header a {
+	color: var(--color-gray);
+	text-decoration: none;
+	cursor: pointer;
+}
+.card__header a .icon {
+	display: inline-block;
+	margin-left: 12px;
+	width: 20px;
+	height: 20px;
+	line-height: 17px;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #393B4F;
+	color: var(--color-main);
+}
+
+.datepicker, .schedule {
+	width: 100%;
+	overflow-x: auto;
+}
+.datepicker::-webkit-scrollbar, .schedule::-webkit-scrollbar {
+	background-color: transparent;
+	height: 2px;
+}
+
+.datepicker::-webkit-scrollbar-thumb, .schedule::-webkit-scrollbar-thumb {
+	background-color: transparent;
+}
+
+.datepicker__list, .schedule__list {
+	display: flex;
+	margin-bottom: 16px;
+}

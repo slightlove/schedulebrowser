@@ -1,0 +1,16 @@
+
+.datepicker__item {
+	display: inline-block;
+	padding: 8px 15px;
+	margin-right: 10px;
+	text-align: center;
+	border-radius: 8px;
+	background-color: var(--color-date);
+	cursor: pointer;
+	transition: background-color 0.3s ease
+}
+.datepicker__item:last-child {margin-right: 0}
+
+.datepicker__item:hover, .datepicker__item-active {
+	background-color: var(--color-highlight);
+}

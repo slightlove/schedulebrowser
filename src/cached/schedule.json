@@ -1,0 +1,104 @@
+[
+	{
+		"datetime": "2020/12/13 15:30",
+		"place": "桃園市立綜合體育館",
+		"type": "例行賽",
+		"teams": [
+			{
+				"icon": "logo3.png",
+				"name": "新竹街口攻城獅",
+				"score": 112
+			},
+			{
+				"icon": "logo4.png",
+				"name": "台北富邦勇士",
+				"score": 105
+			}
+		]
+	},
+	{
+		"datetime": "2020/12/13 16:00",
+		"place": "桃園市立綜合體育館",
+		"type": "公開賽",
+		"teams": [
+			{
+				"icon": "logo1.png",
+				"name": "桃園領航猿籃球隊",
+				"score": 120
+			},
+			{
+				"icon": "logo2.png",
+				"name": "福爾摩沙台新夢想家",
+				"score": 118
+			}
+		]
+	},
+	{
+		"datetime": "2020/12/14 08:00",
+		"place": "新竹縣體育場",
+		"type": "友誼賽",
+		"teams": [
+			{
+				"icon": "logo3.png",
+				"name": "新竹街口攻城獅",
+				"score": 116
+			},
+			{
+				"icon": "logo2.png",
+				"name": "福爾摩沙台新夢想家",
+				"score": 210
+			}
+		]
+	},
+	{
+		"datetime": "2021/01/12 10:00",
+		"place": "新竹縣體育場",
+		"type": "友誼賽",
+		"teams": [
+			{
+				"icon": "logo2.png",
+				"name": "福爾摩沙台新夢想家",
+				"score": 116
+			},
+			{
+				"icon": "logo4.png",
+				"name": "台北富邦勇士",
+				"score": 114
+			}
+		]
+	},
+	{
+		"datetime": "2021/02/07 20:00",
+		"place": "新竹縣體育場",
+		"type": "例行賽",
+		"teams": [
+			{
+				"icon": "logo1.png",
+				"name": "桃園領航猿籃球隊",
+				"score": 110
+			},
+			{
+				"icon": "logo3.png",
+				"name": "新竹街口攻城獅",
+				"score": 102
+			}
+		]
+	},
+	{
+		"datetime": "2022/02/01 02:00",
+		"place": "桃園市立綜合體育館",
+		"type": "例行賽",
+		"teams": [
+			{
+				"icon": "logo1.png",
+				"name": "桃園領航猿籃球隊",
+				"score": ""
+			},
+			{
+				"icon": "logo2.png",
+				"name": "福爾摩沙台新夢想家",
+				"score": ""
+			}
+		]
+	}
+]
