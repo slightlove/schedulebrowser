@@ -13,9 +13,12 @@ import {indexMonth, indexByDate} from './model/Schedule';
 
 const WEBSITE_TITLE = '新竹街口攻城獅'
 const NUMBER_OF_MONTH = Object.keys(indexMonth()).length;
+const HISTORY = sessionStorage.getItem('history');
+
 
 const App = () => {
 	const [currentDate, setCurrentDate] = useState('2020-12');
+	const [ticketList, setTicketList] = useState([]);
 
 	return (
 		<div className="container">
@@ -40,7 +43,7 @@ const App = () => {
 				indexByDate(currentDate).length && (
 					<div className="schedule">
 						<div className="schedule__list" style={{width: 267 * indexByDate(currentDate).length + 'px'}}>
-							{ indexByDate(currentDate).map((item, index) => <Schedule data={item} key={index}/>)}
+							{ indexByDate(currentDate).map((item) => <Schedule data={item} key={item.id} ticketList={ticketList} setTicketList={setTicketList}/>)}
 						</div>
 					</div>
 				)

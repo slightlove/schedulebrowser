@@ -22,7 +22,6 @@ body, html {
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
-	max-width: var(--device-mobile-width);
 	min-height: 100vh;
 	overflow: hidden;
 }
@@ -53,6 +52,11 @@ section {
 	border-style: solid;
 	color: var(--color-main);
 	cursor: pointer;
+}
+
+.btn:disabled {
+	pointer-events: none;
+	opacity: .65;
 }
 
 .btn-main {
@@ -123,3 +127,4 @@ section {
 	display: flex;
 	margin-bottom: 16px;
 }
+

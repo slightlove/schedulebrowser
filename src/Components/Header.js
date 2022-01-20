@@ -2,7 +2,7 @@ import '../css/header.css'
 
 function Header({title}) {
 	return (
-		<header className='container'>
+		<header>
 			<a href="#" className="button-back">‹</a>
 			<h1>{title}</h1>
 		</header>

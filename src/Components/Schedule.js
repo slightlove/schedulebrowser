@@ -3,7 +3,8 @@ import 'dayjs/locale/zh-tw';
 import '../css/components/schedule.css';
 
 function Schedule({data}) {
-	const {datetime, place, teams, type, icon} = data;
+	const {id, datetime, place, teams, type} = data;
+	
 	return (
 		<div className="schedule__item">
 			<div className="schedule__item__header">
@@ -27,7 +28,15 @@ function Schedule({data}) {
 			<div className="schedule__item__footer">
 				<div className="buttons">
 					<button className="btn btn-main" type="button">查看詳情</button>
-					<button className="btn btn-danger" type="button">購票</button>
+					<button className="btn btn-danger" type="button" onClick={(e) => {
+						console.log({
+							gameId: id,
+							date: dayjs(datetime).format('YYYY-MM-DD'),
+							time: dayjs(datetime).format('HH:mm')
+						});
+						event.target.setAttribute('disabled', true);
+						event.target.textContent = '已購買'
+					}}>購票</button>
 				</div>
 			</div>
 		</div>

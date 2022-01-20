@@ -5,7 +5,6 @@ header {
 	right: 0;
 	margin: auto;
 	width: 100%;
-	max-width: var(--device-mobile-width);
 	height: 50px;
 	display: flex;
 	align-items: center;
@@ -17,7 +16,7 @@ header h1 {
 }
 header .button-back {
 	position: absolute;
-	left: 0;
+	left: 5%;
 	color: var(--color-main);
 	text-decoration: none;
 	font-size: 2rem;
