@@ -28,17 +28,17 @@ const App = () => {
 			<Header title={WEBSITE_TITLE}/>
 			<section className="card__header">
 				<h2>賽程表</h2>
-				<a href="#">
+				<a href="/#">
 					聯盟戰況
 					<span className="icon">›</span>
 				</a>
 			</section>
-			<div className="datepicker" style={{visibility: Object.keys(indexMonth()).length == 0 ? 'hidden' : ''}}>
+			<div className="datepicker" style={{visibility: Object.keys(indexMonth()).length === 0 ? 'hidden' : ''}}>
 				<div className="datepicker__list" style={{width: 133.03 * Object.keys(indexMonth()).length + 'px'}}>
-					{ Object.keys(indexMonth()).map((month) => <DatePicker isActive={currentDate == month} date={month} setCurrentDate={setCurrentDate} key={month}/>) }
+					{ Object.keys(indexMonth()).map((month) => <DatePicker isActive={currentDate === month} date={month} setCurrentDate={setCurrentDate} key={month}/>) }
 				</div>
 			</div>
-			<div className="schedule" style={{visibility: indexByDate(currentDate).length == 0 ? 'hidden' : ''}}>
+			<div className="schedule" style={{visibility: indexByDate(currentDate).length === 0 ? 'hidden' : ''}}>
 				<div className="schedule__list" style={{width: 267 * (indexByDate(currentDate).length > MAX_TO_SHOWN ? MAX_TO_SHOWN : indexByDate(currentDate).length) + 'px'}}>
 					{ indexByDate(currentDate).map((item, index) => index < MAX_TO_SHOWN && <Schedule data={item} key={item.id} paidTicketList={ paidTicketList }  setPaidTicketList={ setPaidTicketList }/>)}
 				</div>
