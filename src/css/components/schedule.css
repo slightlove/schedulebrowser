@@ -43,6 +43,6 @@
 }
 .schedule__item .schedule__item__body .schedule__list__item .text h5 { margin: 0; }
 .schedule__item .schedule__item__body .schedule__list__item .image {
-	flex: 1;
+	width: 35px;
 	margin-right: 1rem;
 }

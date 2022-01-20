@@ -17,6 +17,7 @@ const App = () => {
 	const [currentDate, setCurrentDate] = useState('2020-12');
 	const history = JSON.parse(sessionStorage.getItem('history')) || [];
 	const [paidTicketList, setPaidTicketList] = useState(history);
+	const MAX_TO_SHOWN = 10;
 
 	useEffect(() => {
 		sessionStorage.setItem('history', JSON.stringify(paidTicketList));
@@ -38,8 +39,8 @@ const App = () => {
 				</div>
 			</div>
 			<div className="schedule" style={{visibility: indexByDate(currentDate).length == 0 ? 'hidden' : ''}}>
-				<div className="schedule__list" style={{width: 267 * indexByDate(currentDate).length + 'px'}}>
-					{ indexByDate(currentDate).map((item) => <Schedule data={item} key={item.id} paidTicketList={ paidTicketList }  setPaidTicketList={ setPaidTicketList }/>)}
+				<div className="schedule__list" style={{width: 267 * (indexByDate(currentDate).length > MAX_TO_SHOWN ? MAX_TO_SHOWN : indexByDate(currentDate).length) + 'px'}}>
+					{ indexByDate(currentDate).map((item, index) => index < MAX_TO_SHOWN && <Schedule data={item} key={item.id} paidTicketList={ paidTicketList }  setPaidTicketList={ setPaidTicketList }/>)}
 				</div>
 			</div>
 		</div>
